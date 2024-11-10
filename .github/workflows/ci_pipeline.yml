@@ -20,7 +20,7 @@ jobs:
         uses: actions/setup-python@v5
 
       - name: Install black formatter
-        uses: pip install black
+        run: pip install black
       
       - name: Check code
-        uses: black . --check
+        run: black . --check
