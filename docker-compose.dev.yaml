@@ -1,0 +1,12 @@
+services:
+  backend:
+    build:
+      context: ./backend
+    ports:
+     - "8000:8000"
+    environment:
+      - ENV=development
+    volumes:
+      - ./backend:/app
+  
+  
