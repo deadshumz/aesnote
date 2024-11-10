@@ -3,10 +3,10 @@ name: Black check
 on:
   push:
     paths:
-     - '**/*.py'
+      - "**/*.py"
   pull_request:
     paths:
-     - '**/*.py'
+      - "**/*.py"
 
 jobs:
   black:
@@ -21,6 +21,6 @@ jobs:
 
       - name: Install black formatter
         run: pip install black
-      
+
       - name: Check code
-        run: black . --check
+        run: black . --check --color --diff
