@@ -9,7 +9,7 @@ echo "Copying files to remote server..."
 scp -o StrictHostKeyChecking=no -r -q * "$REMOTE_USER@$REMOTE_HOST:$REMOTE_PATH"
 
 echo "Restarting containers..."
-ssh -o StrictHostKeyChecking=no "$REMOTE_USER@$REMOTE_HOST" << EOF
+ssh -o StrictHostKeyChecking=no -T -q "$REMOTE_USER@$REMOTE_HOST" << EOF
     cd $REMOTE_PATH
     
     echo "Stopping containers..."
