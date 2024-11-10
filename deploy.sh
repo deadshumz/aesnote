@@ -1,8 +1,8 @@
 #!/bin/bash
 
 REMOTE_USER=$REMOTE_USER
-REMOTE_HOST="your.server.com"
-REMOTE_PATH="/path/to/deploy"
+REMOTE_HOST=$REMOTE_HOST
+REMOTE_PATH=$REMOTE_PATH
 DOCKER_COMPOSE_FILE="docker-compose.dev.yaml"
 
 echo "Copying files to remote server..."
